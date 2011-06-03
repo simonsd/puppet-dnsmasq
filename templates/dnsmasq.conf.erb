@@ -1,0 +1,15 @@
+read-ethers
+dhcp-range=interface:virbr0,192.168.122.5,192.168.122.200
+dhcp-option=3,192.168.122.32
+dhcp-lease-max=1000
+dhcp-authoritative
+dhcp-boot=pxelinux.0
+dhcp-boot=net:normalarch,pxelinux.0
+dhcp-boot=net:ia64,/var/lib/cobbler/elilo-3.6-ia64.efi
+log-queries
+except-interface=wlan0
+address=/puppet/192.168.122.1
+address=/zetsubou/192.168.122.1
+address=/centos-server/192.168.122.32
+address=/fedora-client/192.168.122.33
+address=/ubuntu-client/192.168.122.34
